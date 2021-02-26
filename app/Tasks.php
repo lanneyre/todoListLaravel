@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tasks extends Model
 {
@@ -12,4 +13,6 @@ class Tasks extends Model
      * @var string
      */
     protected $table = 'tasks';
+
+
 }

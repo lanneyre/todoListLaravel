@@ -4,7 +4,7 @@
     <div class="panel-body">
         @include('common.errors')
 
-        <form action="{{url('tasks')}}" method="post" class="form-horizontal">
+        <form action="{{ url('tasks') }}" method="post" class="form-horizontal">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="task" class="col-sm-3 control-label">Task</label>

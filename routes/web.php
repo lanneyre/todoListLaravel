@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\TasksController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TasksController;
 
 
 /*
@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'web'], function (){
 
     Route::get('/', [TasksController::class, 'show']);
+
+    Route::get('/tasks/{task}', [TasksController::class, 'edit']);
+
+    Route::put('/tasks', [TasksController::class, 'saveEdit']);
 
     Route::post('/tasks', [TasksController::class, 'insert']);
 
